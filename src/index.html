@@ -4,10 +4,43 @@
     <meta charset="utf-8">
     <title>Caesar Cipher</title>
     <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Lemonada&display=swap" rel="stylesheet">
   </head>
   <body>
     <div id="root">
-      <h1>Hello world!</h1>
+      <div id="first-screen" class="title-container">
+        <h1 class="title-text">Love Birds</h1>
+        <div class="lds-heart"><div></div></div>
+        <button class="start-button" id="start-button">Let's start!</button>
+      </div>
+      <div id="form-container" class="form-container">
+        <form class="form-content">
+          <h2 class="encode">Send to your lovebird a message...nobody will know!</h2>
+          <h3 class="subtitle">Message</h3>
+          <input type="text" id="message" name="message">
+          <h3 class="subtitle">Offset</h3>
+          <input type="text" id="offset" name="offset">
+          <h3 class="subtitle" id="encoded"></h3>
+          <button class="encoded-button" id="encoded-button">Love!</button>
+        </form>
+        <div class="lets-decode">
+          <h3 class="lets-decode-text">Or do you already have a message?... decoded it here</h3>
+          <form>
+            <button id="lets-decode-button" class="encoded-button">Decode!</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div id="decode-form" class="decode-form">
+      <form class="form-content">
+        <h2>Decode</h2>
+          <span>Message</span>
+          <input type="text" id="decoded-message" name="message">
+          <span>Offset</span>
+          <input type="text" id="decoded-offset" name="offset">
+          <span id="decoded"></span>
+          <button id="decoded-button">Send</button>
+      </form>
     </div>
     <script src="index.js" type="module"></script>
   </body>
